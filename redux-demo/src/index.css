@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  display: flex;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+.dvHeader {
+  float: left;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dvFooter {
+  background-color: #ddd;
+  color: #000;
+  padding: 1rem;
+  font-weight: bold;
+  flex: 0 0 100%;
+}
+
+.dvFilter {
+  flex: 0 0 20%;
+}
+.dvFilter ul {
+  list-style: disc;
+}
+.dvFilter ul li {
+  padding: 0.5rem;
+  background-color: #ddd;
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+}
+
+.dvProducts {
+  border: 1px solid #aaa;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 80%;
+}
+.dvProducts .column {
+  flex: 0 0 25%;
+  padding: 0.5rem;
+}
+.dvProducts .column img {
+  cursor: pointer;
+}

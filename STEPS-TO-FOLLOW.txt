@@ -1,0 +1,39 @@
+STEPS TO FOLLOW:
+
+1. npx create-react-app yourfoldername
+2. npm install redux react-redux
+3. create folder redux
+4. under redux folder create folders - actions, reducers and types
+5. create store.js file under redux folder and copy paste below code:
+import { createStore } from "redux";
+import rootReducer from "./reducers/index";
+
+const store = createStore(
+  rootReducer,
+  {},
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+export default store;
+
+6. create index.js under reducers folder and copy paste below code:
+import { combineReducers } from "redux";
+import { productsReducer } from "../reducers/ProductsReducer";
+
+const rootReducer = combineReducers({
+  productsReducer,
+});
+
+export default rootReducer;
+
+7. copy paste imports in index.js root file and wrap Provider and pass store.
+import { Provider } from "react-redux";
+import store from "./redux/store";
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>
+
+
+ 

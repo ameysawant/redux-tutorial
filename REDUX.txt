@@ -1,0 +1,22 @@
+A] WHY REDUX?
+1. Check a practical filter example without redux.
+
+B] HOW TO CREATE YOUR OWN API FOR PRACTICE?
+https://api.json-generator.com/templates/NJojKfMBgNOj/data?access_token=${api}
+
+https://api.json-generator.com/templates/iL0b8yAagFhm/data?access_token=d502zuktnxsxx1slpwduxaml7rp81r45embw26lg
+
+C] WHAT IS REDUX?
+1. Redux is an open source JavaScript Library for Managing Application State.
+2. Most commonly used with React.js
+3. Redux provides centralized store for our application.
+4. It give us direct access to the components.
+5. It is recommended to use only with huge complex projects.
+6. You can use redux with any UI framework.
+7. Will understand redux in a diagram and will discuss how it works.
+
+
+D] WHAT IS REDUX THUNK?
+
+
+E] REDUX SHOPPING CART PROJECT

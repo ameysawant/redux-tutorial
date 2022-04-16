@@ -1,30 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Cart from "./Cart";
 import Filter from "./Filter";
 import Search from "./Search";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  console.log(products);
   const [filteredProduct, setFilteredProduct] = useState([]);
-  console.log(filteredProduct);
+
   useEffect(() => {
     getApiData();
   }, []);
-  console.log("component rendered");
+
   const getApiData = async () => {
-    const API_URL =
-      "https://api.json-generator.com/templates/NJojKfMBgNOj/data?access_token=5e34zn7yhf9i7cfu89lda4qasoelrlo37ooywpw3";
-    const response = await fetch(API_URL);
+    const api = process.env.REACT_APP_API_URL;
+    const response = await fetch(
+      `https://api.json-generator.com/templates/NJojKfMBgNOj/data?access_token=${api}`
+    );
     const data = await response.json();
     setProducts(data.products);
     setFilteredProduct(data.products);
   };
+  // console.log(products);
+  // console.log(filteredProduct);
 
   const sendID = (id) => {
     let x = products.filter((item) => item.id === id);
+    console.log(x);
     setFilteredProduct(x);
   };
+
   return (
     <>
       <div style={{ float: "left", width: "100%" }}>
@@ -41,8 +45,8 @@ const Products = () => {
             const { id, name, image, price } = product;
             return (
               <div key={id}>
-                <img src={image} alt="" />
-                <h2>{name}</h2>
+                <h4>{name}</h4>
+                <img src={image} alt={name} />
                 <p>{price}</p>
               </div>
             );

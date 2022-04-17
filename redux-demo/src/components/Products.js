@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { setProducts } from "../redux/actions/ProductsAction";
 import Filter from "./Filter";
 
@@ -35,7 +36,9 @@ const Products = () => {
               const { id, name, image, price } = product;
               return (
                 <div key={id} className="column">
-                  <img src={image} alt={name} className="img-fluid" />
+                  <Link to={`/detail/${id}`}>
+                    <img src={image} alt={name} className="img-fluid" />
+                  </Link>
                   <h4>{name}</h4>
                   <p>Rs.{price}</p>
                 </div>

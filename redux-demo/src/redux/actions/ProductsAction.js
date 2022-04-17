@@ -15,3 +15,19 @@ export const sendID = (productID) => {
     payload: productID,
   };
 };
+
+//detail action
+export const setDetailProducts = (products, productID) => {
+  return {
+    type: actionTypes.SET_DETAIL_PRODUCTS,
+    payload: products,
+    productID: productID,
+  };
+};
+
+//remove detail action
+export const removeDetailProduct = () => {
+  return {
+    type: actionTypes.REMOVE_DETAIL_PRODUCT,
+  };
+};

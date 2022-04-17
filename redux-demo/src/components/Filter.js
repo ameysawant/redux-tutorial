@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { sendID } from "../redux/actions/ProductsAction";
 
 const Filter = () => {
-  const products = useSelector((state) => state.productsReducer.products);
+  const products = useSelector((state) => state.productReducer.products);
+  // console.log(products);
   const dispatch = useDispatch();
-
   return (
     <div>
       <ul>

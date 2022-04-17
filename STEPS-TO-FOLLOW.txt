@@ -1,9 +1,13 @@
 STEPS TO FOLLOW:
 
 1. npx create-react-app yourfoldername
+
 2. npm install redux react-redux
+
 3. create folder redux
+
 4. under redux folder create folders - actions, reducers and types
+
 5. create store.js file under redux folder and copy paste below code:
 import { createStore } from "redux";
 import rootReducer from "./reducers/index";
@@ -37,3 +41,5 @@ import store from "./redux/store";
 
 
  
+
+https://api.json-generator.com/templates/NJojKfMBgNOj/data?access_token=${api}

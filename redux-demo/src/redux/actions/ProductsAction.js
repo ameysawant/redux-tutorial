@@ -1,6 +1,6 @@
 import { actionTypes } from "../types/types";
 
-//set products action
+//fetch products
 export const setProducts = (products) => {
   return {
     type: actionTypes.SET_PRODUCTS,
@@ -8,26 +8,10 @@ export const setProducts = (products) => {
   };
 };
 
-//sendID action
+//send ID
 export const sendID = (productID) => {
   return {
     type: actionTypes.SEND_ID,
     payload: productID,
-  };
-};
-
-//detail action
-export const setDetailProducts = (products, productID) => {
-  return {
-    type: actionTypes.SET_DETAIL_PRODUCTS,
-    payload: products,
-    productID: productID,
-  };
-};
-
-//remove detail action
-export const removeDetailProduct = () => {
-  return {
-    type: actionTypes.REMOVE_DETAIL_PRODUCT,
   };
 };

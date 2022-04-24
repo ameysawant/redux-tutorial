@@ -6,7 +6,6 @@ const productiState = {
 };
 
 export const productReducer = (state = productiState, action) => {
-  console.log(action);
   switch (action.type) {
     case actionTypes.SET_PRODUCTS:
       return {

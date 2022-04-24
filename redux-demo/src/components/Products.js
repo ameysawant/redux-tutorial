@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../redux/actions/ProductsAction";
+import { getApiData } from "../redux/actions/ProductsAction";
 import Filter from "./Filter";
 
 const Products = () => {
@@ -10,20 +10,20 @@ const Products = () => {
   const filteredProduct = useSelector(
     (state) => state.productReducer.filteredProduct
   );
-  console.log(filteredProduct);
+  // console.log(filteredProduct);
 
   useEffect(() => {
-    getApiData();
+    dispatch(getApiData());
   }, []);
 
-  const getApiData = async () => {
-    const api = process.env.REACT_APP_API_URL;
-    const response = await fetch(
-      `https://api.json-generator.com/templates/NJojKfMBgNOj/data?access_token=${api}`
-    );
-    const data = await response.json();
-    dispatch(setProducts(data.products));
-  };
+  // const getApiData = async () => {
+  //   const api = process.env.REACT_APP_API_URL;
+  //   const response = await fetch(
+  //     `https://api.json-generator.com/templates/NJojKfMBgNOj/data?access_token=${api}`
+  //   );
+  //   const data = await response.json();
+  //   dispatch(setProducts(data.products));
+  // };
 
   return (
     <>
